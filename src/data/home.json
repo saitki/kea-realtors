@@ -1,0 +1,75 @@
+{
+  "exclusiveCollection": {
+    "title": "Colección Exclusiva",
+    "subtitle": "Residencias de marca e inversiones de ultra lujo",
+    "allPropertiesLabel": "Todas las propiedades",
+    "properties": [
+      {
+        "id": 1,
+        "title": "Faena Miami Penthouse",
+        "destination": "Faena Miami",
+        "price": 12500000,
+        "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&h=600&fit=crop",
+        "bedrooms": 4,
+        "bathrooms": 5,
+        "sqft": 4500,
+        "description": "Penthouse de lujo con vista al océano"
+      },
+      {
+        "id": 2,
+        "title": "The St. Regis Residences",
+        "destination": "The St. Regis",
+        "price": 8900000,
+        "image": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&h=600&fit=crop",
+        "bedrooms": 3,
+        "bathrooms": 4,
+        "sqft": 3800,
+        "description": "Residencia exclusiva con servicios de hotel"
+      },
+      {
+        "id": 3,
+        "title": "Faena Tulum Beachfront",
+        "destination": "Faena Tulum",
+        "price": 6750000,
+        "image": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&h=600&fit=crop",
+        "bedrooms": 3,
+        "bathrooms": 3,
+        "sqft": 3200,
+        "description": "Villa frente al mar con arquitectura contemporánea"
+      },
+      {
+        "id": 4,
+        "title": "Faena Miami Oceanview",
+        "destination": "Faena Miami",
+        "price": 9200000,
+        "image": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=600&fit=crop",
+        "bedrooms": 3,
+        "bathrooms": 4,
+        "sqft": 3500,
+        "description": "Residencia con vistas panorámicas al océano"
+      },
+      {
+        "id": 5,
+        "title": "The St. Regis Sky Villa",
+        "destination": "The St. Regis",
+        "price": 15800000,
+        "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
+        "bedrooms": 5,
+        "bathrooms": 6,
+        "sqft": 5200,
+        "description": "Villa en el cielo con amenidades premium"
+      },
+      {
+        "id": 6,
+        "title": "Faena Tulum Jungle Villa",
+        "destination": "Faena Tulum",
+        "price": 4500000,
+        "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
+        "bedrooms": 2,
+        "bathrooms": 3,
+        "sqft": 2800,
+        "description": "Villa integrada con la naturaleza"
+      }
+    ]
+  }
+}

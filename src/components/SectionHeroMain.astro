@@ -1,0 +1,137 @@
+---
+import HeroSlide from "./HeroSlide.astro";
+---
+
+<style is:global>
+  body {
+    background: #000;
+    font-family:
+      Helvetica Neue,
+      Helvetica,
+      Arial,
+      sans-serif;
+    font-size: 14px;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  .swiper {
+    width: 100%;
+    height: 100vh;
+  }
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hero-slide {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  /* Imagen de fondo */
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  /* Overlay oscuro */
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 2;
+  }
+
+  /* Contenido */
+  .hero-content {
+    position: relative;
+    z-index: 3;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 4vw, 4rem);
+    font-weight: 700;
+  }
+
+  .hero-subtitle {
+    max-width: 680px;
+    font-size: 1.125rem;
+    margin: 1.5rem 0;
+  }
+
+  /* Development tag */
+  .development-tag .separator {
+    width: 40px;
+    height: 2px;
+    background: #fff;
+  }
+</style>
+<div class="swiper">
+  <div class="swiper-wrapper">
+    <!-- Additional required wrapper -->
+    <HeroSlide
+      title="Explore High-End Real Estate and Lifestyle Opportunities in Miami & the Caribbean"
+      description=" Luxury seaside living in Miami, Cancun, Playa del Carmen, and Tulum, with top-tier amenities and a vibrant tropical lifestyle."
+      city="The Ritz Carlton Residences, Riviera Maya"
+      src="https://kearealtors.com/images/content/hero/ritz-carlton-residences-hero.webp"
+    />
+    <HeroSlide
+      title="Explore High-End Real Estate and Lifestyle Opportunities in Miami & the Caribbean"
+      description=" Luxury seaside living in Miami, Cancun, Playa del Carmen, and Tulum, with top-tier amenities and a vibrant tropical lifestyle."
+      city="Marietta, Isla Mujeres"
+      src="img/content/hero/marietta-hero.webp"
+    />
+    <HeroSlide
+      title="Explore High-End Real Estate and Lifestyle Opportunities in Miami & the Caribbean"
+      description=" Luxury seaside living in Miami, Cancun, Playa del Carmen, and Tulum, with top-tier amenities and a vibrant tropical lifestyle."
+      city="Faena Tulum, Tulum"
+      src="img/content/hero/faena-tulum-hero.webp"
+    />
+    <HeroSlide
+      title="Explore High-End Real Estate and Lifestyle Opportunities in Miami & the Caribbean"
+      description=" Luxury seaside living in Miami, Cancun, Playa del Carmen, and Tulum, with top-tier amenities and a vibrant tropical lifestyle."
+      city="Náutica Residences, Cancún"
+      src="img/content/hero/background-hero.webp"
+    />
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+  <div class="hero__bullets container pex-5 pex-md-4">
+    <div
+      class="swiper-pagination-hero swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"
+    >
+      <span class="swiper-pagination-bullet swiper-pagination-bullet-active"
+      ></span><span class="swiper-pagination-bullet"></span><span
+        class="swiper-pagination-bullet"></span><span
+        class="swiper-pagination-bullet"></span>
+    </div>
+    <div class="numeric-indicator__nav">
+      <span id="current-slide">1</span> / <span id="total-slides">4</span>
+    </div>
+  </div>
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <!-- If we need scrollbar -->
+  <div class="swiper-scrollbar"></div>
+
+  <script src="../script/swiper.js"></script>
+</div>

@@ -1,0 +1,38 @@
+---
+interface Props {
+  title: string;
+  city: string;
+  price: Number;
+  src: string;
+}
+
+const { title, city, price, src } = Astro.props;
+---
+
+<div class="col-12 col-md-4">
+  <a href="" class="text-decoration-none">
+    <div class="card h-100 property-card">
+      <div class="property-card__media">
+        <img
+          src={src}
+          alt={title}
+          class="card-img"
+          loading="lazy"
+          decoding="async"
+        />
+        <span class="property-card__badge">Pre-Venta</span>
+      </div>
+
+      <div class="card-body property-card__body">
+        <h5 class="property-card__title">{title}</h5>
+        <p class="property-card__city">{city}</p>
+
+        <p class="property-card__features">1, 2 y 3 recámaras</p>
+
+        <div class="spacer-divider"></div>
+
+        <p class="property-card__price">{price}</p>
+      </div>
+    </div>
+  </a>
+</div>

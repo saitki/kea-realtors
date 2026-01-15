@@ -1,0 +1,22 @@
+---
+// ExclusiveCollection.astro
+
+import homeData from "../data/home.json";
+
+const { exclusiveCollection } = homeData;
+---
+
+<section class="exclusive-collection-section"></section>
+
+<style>
+  .exclusive-collection-section {
+    padding: 4rem 0;
+    background-color: #fafafa;
+  }
+
+  @media (max-width: 768px) {
+    .exclusive-collection-section {
+      padding: 2rem 0;
+    }
+  }
+</style>
