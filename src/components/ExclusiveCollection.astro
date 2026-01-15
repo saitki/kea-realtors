@@ -3,21 +3,9 @@
 import ExclusiveCollectionIsland from "./ExclusiveCollection.jsx";
 import homeData from "../data/home.json";
 
-const { exclusiveCollection } = homeData;
+const { exclusiveCollection } = homeData.home;
 ---
 
 <section class="exclusive-collection-section">
   <ExclusiveCollectionIsland data={exclusiveCollection} client:load />
 </section>
-
-<style>
-  .exclusive-collection-section {
-    padding: 4rem 0;
-  }
-
-  @media (max-width: 768px) {
-    .exclusive-collection-section {
-      padding: 2rem 0;
-    }
-  }
-</style>

@@ -1,82 +1,141 @@
-<header class="position-absolute top-0 w-100 z-3">
-  <nav class="container-xxl px-4 py-3 text-white">
+---
+import EmailIcon from "../icons/EmailIcon.astro";
+import Logo from "../icons/Logo.astro";
+import PhoneIcon from "../icons/PhoneIcon.astro";
+import TablerMenu from "../icons/TablerMenu.astro";
+import homeData from "../data/home.json";
+
+const { header } = homeData.home;
+---
+
+<header class="header position-fixed top-0 w-100 z-3" id="mainHeader">
+  <nav class="container-xxl px-4 py-3">
     <!-- TOP ROW -->
     <div
-      class="d-flex align-items-center justify-content-between border-bottom border-secondary-900 p-1"
+      class="d-flex align-items-center justify-content-between border-bottom p-1"
     >
       <!-- Logo izquierda -->
       <a class="header__logo" href="#">
-        <img
-          src="https://kearealtors.com/images/logos/kea-realtors-logo-white.webp"
-          alt="Kea Realtors Logo"
-          loading="lazy"
-          decoding="async"
-          style="max-width: 100%;"
-        />
+        <Logo id={header.logo.id} src={header.logo.src} alt={header.logo.alt} />
       </a>
-
+      <!-- NAVEGACIÓN CENTRADA (visible solo en scroll) -->
+      <div class="header__navCentered">
+        <ul class="d-flex gap-4 list-unstyled mb-0">
+          {
+            header.menu.map((item, index) => (
+              <li>
+                <a
+                  href={item.href}
+                  class={`headerMenu__link ${index === 0 ? "active" : ""}`}
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
       <!-- Derecha: icons + menu -->
       <div class="d-flex align-items-center gap-4">
         <!-- Icons -->
-        <ul class="d-flex gap-3 list-unstyled mb-0">
+        <ul class="d-flex gap-3 list-unstyled mb-0 header__icons">
           <li>
             <a href="tel:+5219981264494">
-              <svg
-                stroke="#fff"
-                width="21"
-                height="20"
-                viewBox="0 0 21 20"
-                fill="#fff"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M7.52637 2.61932C7.58216 2.68032 7.62784 2.75051 7.66113 2.82733L7.66406 2.83319L9.27441 6.42108V6.42694L9.31445 6.52069C9.36312 6.63434 9.38287 6.75886 9.37207 6.88202C9.36136 7.00382 9.32129 7.12119 9.25488 7.22382C9.25182 7.22838 9.24661 7.23536 9.23633 7.24823L7.62012 9.1701L7.41016 9.41913L7.55469 9.7121C8.1894 11.0019 9.51457 12.3161 10.8184 12.9494L11.1123 13.093L11.3613 12.8801L13.2588 11.2609L13.2598 11.2619C13.2637 11.2586 13.2681 11.255 13.2725 11.2521L13.2744 11.2512C13.378 11.1821 13.4971 11.1396 13.6211 11.1281C13.7442 11.1167 13.8686 11.1366 13.9824 11.1848L13.9873 11.1867L17.668 12.8361L17.6738 12.8381C17.7703 12.88 17.8544 12.9433 17.9248 13.0197H17.4727L13.8984 11.4191L13.6104 11.2892L13.3701 11.4943L11.4717 13.1135C11.4672 13.1172 11.4618 13.121 11.457 13.1242C11.3497 13.1952 11.226 13.238 11.0977 13.2473C10.9697 13.2565 10.8417 13.2324 10.7256 13.1779C9.36225 12.5192 7.98433 11.1519 7.32617 9.80585C7.27075 9.69016 7.24575 9.56183 7.25391 9.43378C7.26215 9.30505 7.30365 9.18055 7.37402 9.07245L7.37695 9.06659L7.37793 9.06757L7.38379 9.05975L8.99902 7.12714L9.19824 6.8869L9.07129 6.60272L7.4834 3.04999L7.52637 2.61932ZM3.5 6.24921C3.4983 5.30293 3.84153 4.38795 4.46484 3.67596C5.08698 2.96551 5.94583 2.50451 6.88184 2.38007L6.88281 2.38104C7.04327 2.36151 7.20542 2.39449 7.3457 2.47479C7.3863 2.49805 7.42377 2.52581 7.45898 2.55585L6.9082 2.62909C6.03165 2.74634 5.22761 3.17926 4.64648 3.84589C4.06579 4.51205 3.74702 5.36649 3.75 6.25018C3.75304 9.03368 4.86001 11.7028 6.82812 13.6711C8.79616 15.6391 11.4649 16.7458 14.248 16.7492L14.249 16.7502V16.7492C15.1341 16.752 15.9897 16.4331 16.6562 15.8508C17.3229 15.2683 17.7553 14.4629 17.8711 13.5851L17.9424 13.0373C17.9734 13.0733 18.0015 13.1119 18.0254 13.1535C18.1057 13.2939 18.1388 13.4568 18.1191 13.6174C17.9948 14.5538 17.5341 15.413 16.8232 16.0353C16.1113 16.6586 15.1972 17.0019 14.251 17.0002H14.25C8.32307 17.0002 3.50009 12.1771 3.5 6.25018V6.24921Z"
-                ></path>
-              </svg>
+              <PhoneIcon />
             </a>
           </li>
           <li>
             <a href="mailto:sales@kearealtors.com">
-              <svg
-                width="21"
-                height="20"
-                viewBox="0 0 21 20"
-                fill="#fff"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M18 3.75H3C2.83424 3.75 2.67527 3.81585 2.55806 3.93306C2.44085 4.05027 2.375 4.20924 2.375 4.375V15C2.375 15.3315 2.5067 15.6495 2.74112 15.8839C2.97554 16.1183 3.29348 16.25 3.625 16.25H17.375C17.7065 16.25 18.0245 16.1183 18.2589 15.8839C18.4933 15.6495 18.625 15.3315 18.625 15V4.375C18.625 4.20924 18.5592 4.05027 18.4419 3.93306C18.3247 3.81585 18.1658 3.75 18 3.75ZM16.393 5L10.5 10.4023L4.60703 5H16.393ZM17.375 15H3.625V5.79609L10.0773 11.7109C10.1926 11.8168 10.3435 11.8755 10.5 11.8755C10.6565 11.8755 10.8074 11.8168 10.9227 11.7109L17.375 5.79609V15Z"
-                ></path>
-              </svg>
+              <EmailIcon />
             </a>
           </li>
-          <li>ES</li>
-          <li>EN</li>
+          <li class="header__lang">ES</li>
+          <li class="header__lang">EN</li>
         </ul>
-
         <!-- Menu toggle -->
-        <button id="toggleSidebar" class="header__menuBtn md:d-none"
-          ><i>::after</i></button
-        >
+        <button class="header__menuBtn" aria-label="Abrir menú">
+          <TablerMenu />
+        </button>
       </div>
     </div>
-
     <!-- BOTTOM ROW (navigation right) -->
-    <div class="mt-3">
-      <ul class="d-flex justify-content-end gap-4 list-unstyled mb-0">
-        <li>
-          <a href="#" class="headerMenu__link">HOME</a>
-        </li>
-        <li>
-          <a href="#" class="headerMenu__link">DESTINATIONS</a>
-        </li>
-        <li>
-          <a href="#" class="headerMenu__link">DEVELOPMENTS</a>
-        </li>
-        <li>
-          <a href="#" class="headerMenu__link">CONTACT US</a>
-        </li>
+    <div class="mt-3 header__navWrapper">
+      <ul
+        class="d-flex justify-content-end gap-4 list-unstyled mb-0 header__nav"
+      >
+        {
+          header.menu.map((item, index) => (
+            <li>
+              <a
+                href={item.href}
+                class={`headerMenu__link ${index === 0 ? "active" : ""}`}
+              >
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
       </ul>
     </div>
   </nav>
 </header>
+
+<script>
+  const header = document.getElementById("mainHeader");
+  const logo = document.getElementById("headerLogo");
+  const phoneIcon = document.getElementById("phoneIcon");
+  const emailIcon = document.getElementById("emailIcon");
+
+  const logoWhite =
+    "https://kearealtors.com/images/logos/kea-realtors-logo-white.webp";
+  const logoGreen =
+    "https://kearealtors.com/images/logos/kea-realtors-logo-green.webp";
+
+  let lastScroll = 0;
+
+  function updateHeaderState(isScrolled) {
+    if (isScrolled) {
+      // Estado scrolled (blanco con elementos negros)
+      header?.classList.add("scrolled");
+
+      // Cambiar logo a verde
+      if (logo) logo.src = logoGreen;
+
+      // Cambiar iconos a negro
+      if (phoneIcon) {
+        phoneIcon.setAttribute("fill", "#000");
+        phoneIcon.setAttribute("stroke", "#000");
+      }
+
+      if (emailIcon) {
+        emailIcon.setAttribute("fill", "#000");
+      }
+
+      // tablerMenu se maneja con CSS
+    } else {
+      // Estado inicial (transparente con elementos blancos)
+      header?.classList.remove("scrolled");
+
+      // Cambiar logo a blanco
+      if (logo) logo.src = logoWhite;
+
+      // Cambiar iconos a blanco
+      if (phoneIcon) {
+        phoneIcon.setAttribute("fill", "#fff");
+        phoneIcon.setAttribute("stroke", "#fff");
+      }
+
+      if (emailIcon) {
+        emailIcon.setAttribute("fill", "#fff");
+      }
+
+      // tablerMenu se maneja con CSS
+    }
+  }
+
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset;
+    updateHeaderState(currentScroll > 50);
+    lastScroll = currentScroll;
+  });
+</script>

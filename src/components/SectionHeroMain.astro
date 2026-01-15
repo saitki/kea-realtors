@@ -1,7 +1,53 @@
 ---
 import HeroSlide from "./HeroSlide.astro";
+import homeData from "../data/home.json";
+
+const { heroSection } = homeData.home;
 ---
 
+<div class="swiper">
+  <div class="swiper-wrapper">
+    <!-- Additional required wrapper -->
+    {
+      heroSection.slides.map((slide) => (
+        <HeroSlide
+          title={slide.title}
+          description={slide.description}
+          city={slide.city}
+          src={slide.image}
+        />
+      ))
+    }
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+  <div class="hero__bullets container pex-5 pex-md-4">
+    <div
+      class="swiper-pagination-hero swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"
+    >
+      {
+        heroSection.slides.map((_, index) => (
+          <span
+            class={`swiper-pagination-bullet ${index === 0 ? "swiper-pagination-bullet-active" : ""}`}
+          />
+        ))
+      }
+    </div>
+    <div class="numeric-indicator__nav">
+      <span id="current-slide">1</span> / <span id="total-slides"
+        >{heroSection.slides.length}</span
+      >
+    </div>
+  </div>
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <!-- If we need scrollbar -->
+  <div class="swiper-scrollbar"></div>
+
+  <script src="../script/swiper.js"></script>
+</div>
 <style is:global>
   body {
     background: #000;
@@ -83,55 +129,3 @@ import HeroSlide from "./HeroSlide.astro";
     background: #fff;
   }
 </style>
-<div class="swiper">
-  <div class="swiper-wrapper">
-    <!-- Additional required wrapper -->
-    <HeroSlide
-      title="Explore High-End Real Estate and Lifestyle Opportunities in Miami & the Caribbean"
-      description=" Luxury seaside living in Miami, Cancun, Playa del Carmen, and Tulum, with top-tier amenities and a vibrant tropical lifestyle."
-      city="The Ritz Carlton Residences, Riviera Maya"
-      src="https://kearealtors.com/images/content/hero/ritz-carlton-residences-hero.webp"
-    />
-    <HeroSlide
-      title="Explore High-End Real Estate and Lifestyle Opportunities in Miami & the Caribbean"
-      description=" Luxury seaside living in Miami, Cancun, Playa del Carmen, and Tulum, with top-tier amenities and a vibrant tropical lifestyle."
-      city="Marietta, Isla Mujeres"
-      src="img/content/hero/marietta-hero.webp"
-    />
-    <HeroSlide
-      title="Explore High-End Real Estate and Lifestyle Opportunities in Miami & the Caribbean"
-      description=" Luxury seaside living in Miami, Cancun, Playa del Carmen, and Tulum, with top-tier amenities and a vibrant tropical lifestyle."
-      city="Faena Tulum, Tulum"
-      src="img/content/hero/faena-tulum-hero.webp"
-    />
-    <HeroSlide
-      title="Explore High-End Real Estate and Lifestyle Opportunities in Miami & the Caribbean"
-      description=" Luxury seaside living in Miami, Cancun, Playa del Carmen, and Tulum, with top-tier amenities and a vibrant tropical lifestyle."
-      city="Náutica Residences, Cancún"
-      src="img/content/hero/background-hero.webp"
-    />
-  </div>
-  <!-- If we need pagination -->
-  <div class="swiper-pagination"></div>
-  <div class="hero__bullets container pex-5 pex-md-4">
-    <div
-      class="swiper-pagination-hero swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"
-    >
-      <span class="swiper-pagination-bullet swiper-pagination-bullet-active"
-      ></span><span class="swiper-pagination-bullet"></span><span
-        class="swiper-pagination-bullet"></span><span
-        class="swiper-pagination-bullet"></span>
-    </div>
-    <div class="numeric-indicator__nav">
-      <span id="current-slide">1</span> / <span id="total-slides">4</span>
-    </div>
-  </div>
-  <!-- If we need navigation buttons -->
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
-
-  <!-- If we need scrollbar -->
-  <div class="swiper-scrollbar"></div>
-
-  <script src="../script/swiper.js"></script>
-</div>

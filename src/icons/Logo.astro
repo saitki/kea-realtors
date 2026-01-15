@@ -1,0 +1,17 @@
+---
+interface Props {
+  id?: string;
+  src?: string;
+  alt?: string;
+}
+const { id, src = "", alt = "Kea Realtors Logo" } = Astro.props;
+---
+
+<img
+  id={id}
+  src={src}
+  alt={alt}
+  loading="lazy"
+  decoding="async"
+  style="max-width: 100%;"
+/>

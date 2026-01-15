@@ -1,8 +1,8 @@
 /* Cormorant Garamond */
 @font-face {
   font-family: "Cormorant Garamond";
-  src: url("/fonts/cormorant-garamond/CormorantGaramond-Regular.woff2")
-    format("woff2");
+  src: url("/fonts/cormorant-garamond/CormorantGaramond-Regular.ttf")
+    format("ttf");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -10,8 +10,8 @@
 
 @font-face {
   font-family: "Cormorant Garamond";
-  src: url("/fonts/cormorant-garamond/CormorantGaramond-Bold.woff2")
-    format("woff2");
+  src: url("/fonts/cormorant-garamond/CormorantGaramond-Bold.ttf")
+    format("ttf");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -20,7 +20,7 @@
 /* Jost */
 @font-face {
   font-family: "Jost";
-  src: url("/fonts/jost/Jost-Regular.woff2") format("woff2");
+  src: url("/fonts/jost/Jost-Regular.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -28,7 +28,7 @@
 
 @font-face {
   font-family: "Jost";
-  src: url("/fonts/jost/Jost-Medium.woff2") format("woff2");
+  src: url("/fonts/jost/Jost-Medium.ttf") format("ttf");
   font-weight: 500;
   font-style: normal;
   font-display: swap;

@@ -1,75 +1,174 @@
 {
-  "exclusiveCollection": {
-    "title": "Colección Exclusiva",
-    "subtitle": "Residencias de marca e inversiones de ultra lujo",
-    "allPropertiesLabel": "Todas las propiedades",
-    "properties": [
-      {
-        "id": 1,
-        "title": "Faena Miami Penthouse",
-        "destination": "Faena Miami",
-        "price": 12500000,
-        "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&h=600&fit=crop",
-        "bedrooms": 4,
-        "bathrooms": 5,
-        "sqft": 4500,
-        "description": "Penthouse de lujo con vista al océano"
+  "home": {
+    "header": {
+      "logo": {
+        "id": "headerLogo",
+        "src": "https://kearealtors.com/images/logos/kea-realtors-logo-white.webp",
+        "alt": "Kea Realtors Logo"
       },
-      {
-        "id": 2,
-        "title": "The St. Regis Residences",
-        "destination": "The St. Regis",
-        "price": 8900000,
-        "image": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&h=600&fit=crop",
-        "bedrooms": 3,
-        "bathrooms": 4,
-        "sqft": 3800,
-        "description": "Residencia exclusiva con servicios de hotel"
+      "menu": [
+        {
+          "label": "HOME",
+          "href": "#"
+        },
+        {
+          "label": "DESTINATIONS",
+          "href": "#destinations"
+        },
+        {
+          "label": "DEVELOPMENTS",
+          "href": "#developments"
+        },
+        {
+          "label": "CONTACT US",
+          "href": "#contact"
+        }
+      ]
+    },
+    "heroSection": {
+      "slides": [
+        {
+          "id": 1,
+          "title": "Explore High-End Real Estate and Lifestyle Opportunities in Miami & the Caribbean",
+          "description": "Luxury seaside living in Miami, Cancun, Playa del Carmen, and Tulum, with top-tier amenities and a vibrant tropical lifestyle.",
+          "city": "The Ritz Carlton Residences, Riviera Maya",
+          "image": "https://kearealtors.com/images/content/hero/ritz-carlton-residences-hero.webp"
+        },
+        {
+          "id": 2,
+          "title": "Explore High-End Real Estate and Lifestyle Opportunities in Miami & the Caribbean",
+          "description": "Luxury seaside living in Miami, Cancun, Playa del Carmen, and Tulum, with top-tier amenities and a vibrant tropical lifestyle.",
+          "city": "Marietta, Isla Mujeres",
+          "image": "img/content/hero/marietta-hero.webp"
+        },
+        {
+          "id": 3,
+          "title": "Explore High-End Real Estate and Lifestyle Opportunities in Miami & the Caribbean",
+          "description": "Luxury seaside living in Miami, Cancun, Playa del Carmen, and Tulum, with top-tier amenities and a vibrant tropical lifestyle.",
+          "city": "Faena Tulum, Tulum",
+          "image": "img/content/hero/faena-tulum-hero.webp"
+        },
+        {
+          "id": 4,
+          "title": "Explore High-End Real Estate and Lifestyle Opportunities in Miami & the Caribbean",
+          "description": "Luxury seaside living in Miami, Cancun, Playa del Carmen, and Tulum, with top-tier amenities and a vibrant tropical lifestyle.",
+          "city": "Náutica Residences, Cancún",
+          "image": "img/content/hero/background-hero.webp"
+        }
+      ]
+    },
+    "exclusiveCollection": {
+      "title": "Colección Exclusiva",
+      "subtitle": "Residencias de marca e inversiones de ultra lujo",
+      "allPropertiesLabel": "Todas las propiedades",
+      "properties": [
+        {
+          "id": 1,
+          "title": "1428 Residences Miami - A North",
+          "destination": "Faena Miami",
+          "locate": "Brickell, Miami",
+          "price": 4140900,
+          "image": "img/content/properties/for-buy/model-a-north-1428-miami.webp",
+          "bedrooms": 2,
+          "bathrooms": 3,
+          "sqft": 167,
+          "description": "Penthouse de lujo con vista al océano"
+        },
+        {
+          "id": 2,
+          "title": "The St. Regis Residences",
+          "destination": "The St. Regis",
+          "locate": "Costa Mujeres, Riviera Maya",
+          "price": 2064000,
+          "image": "img/content/properties/for-buy/model-type-02-st-regis.webp",
+          "bedrooms": 2,
+          "garage": 1,
+          "sqft": 237,
+          "description": "Residencia exclusiva con servicios de hotel"
+        },
+        {
+          "id": 3,
+          "title": "Faena Tulum Beachfront",
+          "destination": "Faena Tulum",
+          "locate": "Tulum, Riviera Maya",
+          "price": 909965,
+          "image": "img/content/properties/for-buy/model-ground-floor-faena-tulum.webp",
+          "bedrooms": 2,
+          "sqft": 142,
+          "description": "Villa frente al mar con arquitectura contemporánea"
+        }
+      ]
+    },
+    "footer": {
+      "brand": {
+        "logo": {
+          "src": "https://kearealtors.com/images/logos/kea-realtors-logo-green.webp",
+          "alt": "KEA Realtors Logo"
+        },
+        "description": "KEA Realtors redefine el concepto inmobiliario de lujo a través de residencias de marca y proyectos ultralujosos en destinos de primer nivel. Con un enfoque cálido y personalizado, guiamos a nuestros clientes de forma fluida desde la visión inicial hasta la adquisición de la propiedad."
       },
-      {
-        "id": 3,
-        "title": "Faena Tulum Beachfront",
-        "destination": "Faena Tulum",
-        "price": 6750000,
-        "image": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&h=600&fit=crop",
-        "bedrooms": 3,
-        "bathrooms": 3,
-        "sqft": 3200,
-        "description": "Villa frente al mar con arquitectura contemporánea"
-      },
-      {
-        "id": 4,
-        "title": "Faena Miami Oceanview",
-        "destination": "Faena Miami",
-        "price": 9200000,
-        "image": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=600&fit=crop",
-        "bedrooms": 3,
-        "bathrooms": 4,
-        "sqft": 3500,
-        "description": "Residencia con vistas panorámicas al océano"
-      },
-      {
-        "id": 5,
-        "title": "The St. Regis Sky Villa",
-        "destination": "The St. Regis",
-        "price": 15800000,
-        "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
-        "bedrooms": 5,
-        "bathrooms": 6,
-        "sqft": 5200,
-        "description": "Villa en el cielo con amenidades premium"
-      },
-      {
-        "id": 6,
-        "title": "Faena Tulum Jungle Villa",
-        "destination": "Faena Tulum",
-        "price": 4500000,
-        "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
-        "bedrooms": 2,
-        "bathrooms": 3,
-        "sqft": 2800,
-        "description": "Villa integrada con la naturaleza"
+      "sections": [
+        {
+          "title": "Website",
+          "links": [
+            {
+              "label": "Destinations",
+              "href": "#"
+            },
+            {
+              "label": "Developments",
+              "href": "#"
+            }
+          ]
+        },
+        {
+          "title": "Developments",
+          "links": [
+            { "label": "Faena Tulum", "href": "#" },
+            { "label": "Faena Miami Residences", "href": "#" },
+            { "label": "The 1428 Miami Residences", "href": "#" },
+            { "label": "The St. Regis Residences", "href": "#" },
+            { "label": "The Reserve At Mayakoba", "href": "#" },
+            { "label": "The Ritz-Carlton Residences", "href": "#" },
+            { "label": "Marietta Isla Mujeres", "href": "#" },
+            { "label": "Naútica Residences", "href": "#" },
+            { "label": "Thompson Residences", "href": "#" },
+            { "label": "MGallery Residences", "href": "#" },
+            { "label": "One Laguna Residences", "href": "#" },
+            { "label": "Aflora Residences", "href": "#" },
+            { "label": "Bay View Grand Residences", "href": "#" },
+            { "label": "INNA Beach Condos", "href": "#" }
+          ]
+        },
+        {
+          "title": "Contact us",
+          "links": [
+            {
+              "label": "Phone",
+              "value": "+521 (998) 126 4494",
+              "href": "tel:+5219981264494"
+            },
+            {
+              "label": "Email",
+              "value": "sales@kearealtors.com",
+              "href": "mailto:sales@kearealtors.com"
+            },
+            {
+              "label": "Facebook",
+              "href": "#"
+            },
+            {
+              "label": "Instagram",
+              "href": "#"
+            }
+          ]
+        }
+      ],
+      "copyright": {
+        "year": 2026,
+        "company": "KEA Realtors",
+        "text": "All Rights Reserved."
       }
-    ]
+    }
   }
 }
