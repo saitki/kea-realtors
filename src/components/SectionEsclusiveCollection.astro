@@ -1,52 +1,12 @@
 ---
 import CardExclusiveCollection from "./CardExclusiveCollection.astro";
+import ExclusiveCollection from "./ExclusiveCollection.astro";
 ---
 
 <section class="section-properties mb-5 mt-5">
   <div class="container pex-5 pex-md-4">
     <div class="row">
-      <div class="col-12 col-md-10 mx-auto">
-        <div id="exclusive-collection-root"></div>
-
-        <!-- Script -->
-        <script src="../components/ExclusiveCollection.js"></script>
-        <div class="exclusive-collection">
-          <div class="row">
-            <div class="col-9">
-              <p>Colección Exclusiva</p>
-            </div>
-            <div class="col-3 text-secondary">
-              <p>Todas las propiedades</p>
-            </div>
-          </div>
-          <div class="row">
-            <p>Residencias de marca e inversiones de ultra lujo</p>
-          </div>
-        </div>
-
-        <div class="properties">
-          <div class="row g-3 g-md-4 justify-content-center">
-            <CardExclusiveCollection
-              title="1428 Residences Miami - A North"
-              city="Brickell, Miami"
-              price="4,140,900"
-              src="/img/content/properties/for-buy/model-a-north-1428-miami.webp"
-            />
-            <CardExclusiveCollection
-              title="The St. Regis Residences - Type 02"
-              city="Costa Mujeres, Riviera Maya"
-              price="2,064,000"
-              src="/img/content/properties/for-buy/model-type-02-st-regis.webp"
-            />
-            <CardExclusiveCollection
-              title="Faena Tulum - B - Ground Floor"
-              city="Tulum, Riviera Maya"
-              price="909,965"
-              src="/img/content/properties/for-buy/model-ground-floor-faena-tulum.webp"
-            />
-          </div>
-        </div>
-      </div>
+      <ExclusiveCollection />
     </div>
   </div>
 </section>

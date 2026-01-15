@@ -1,17 +1,18 @@
 ---
 // ExclusiveCollection.astro
-
+import ExclusiveCollectionIsland from "./ExclusiveCollection.jsx";
 import homeData from "../data/home.json";
 
 const { exclusiveCollection } = homeData;
 ---
 
-<section class="exclusive-collection-section"></section>
+<section class="exclusive-collection-section">
+  <ExclusiveCollectionIsland data={exclusiveCollection} client:load />
+</section>
 
 <style>
   .exclusive-collection-section {
     padding: 4rem 0;
-    background-color: #fafafa;
   }
 
   @media (max-width: 768px) {
