@@ -8,86 +8,6 @@
 .footer {
   background: #f8f6f1;
 }
-.property-card {
-  border: none;
-  border-radius: 12px;
-  overflow: hidden;
-  background-color: #fff;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-  transition: transform .25s ease, box-shadow .25s ease;
-}
-
-/* Hover elegante */
-.property-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-}
-
-/* Media (imagen) */
-.property-card__media {
-  position: relative;
-}
-
-.property-card .card-img {
-  height: 206px;
-  width: 100%;
-  object-fit: cover;
-}
-
-/* Badge */
-.property-card__badge {
-  position: absolute;
-  left: 1rem;
-  bottom: 1rem;
-  padding: .35rem .75rem;
-  font-size: .75rem;
-  font-weight: 600;
-  border-radius: 999px;
-  background-color: #fff;
-  color: #000;
-  box-shadow: 0 2px 6px rgba(0,0,0,.15);
-}
-
-/* Body */
-.property-card__body {
-  padding: 1.25rem;
-}
-
-/* Title */
-.property-card__title {
-  font-size: 1rem;
-  font-weight: 600;
-  margin-bottom: .25rem;
-  line-height: 1.3;
-}
-
-/* City */
-.property-card__city {
-  font-size: .875rem;
-  color: #6c757d;
-  margin-bottom: .5rem;
-}
-
-/* Features */
-.property-card__features {
-  font-size: .875rem;
-  color: #495057;
-  margin-bottom: .75rem;
-}
-
-/* Divider */
-.spacer-divider {
-  height: 1px;
-  background-color: var(--neutral-300, #e5e7eb);
-  margin: .75rem 0;
-}
-
-/* Price */
-.property-card__price {
-  font-size: 1.125rem;
-  font-weight: 700;
-  color: #000;
-}
 .footer__copyright p {
   font-size: 16px;
   color: var(--bs-neutral-900);
@@ -118,8 +38,7 @@
 }
 
 .properties {
-  margin-left: 4vh;
-  margin-right: 4vh;
+
 }
 
 
@@ -300,10 +219,95 @@
   background-color: #0056b3;
 }
 
+
+.property-card {
+  border: none;
+  border-radius: 30px;
+  overflow: hidden;
+  background-color: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transition: transform .25s ease, box-shadow .25s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+
+}
+.card {
+    border: none;
+
+}
+
+
+/* Media (imagen) */
+.property-card__media {
+  position: relative;
+}
+
+.property-card .card-img {
+  height: 206px;
+  width: 100%;
+  border-radius: 0px;
+  object-fit: cover;
+}
+
+/* Badge */
+.property-card__badge {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  padding: .35rem .75rem;
+  font-size: .75rem;
+  font-weight: 600;
+  border-radius: 999px;
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0 2px 6px rgba(0,0,0,.15);
+}
+
+/* Body */
+.property-card__body {
+  padding: 1.25rem;
+}
+
+/* Title */
+.property-card__title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: .25rem;
+  line-height: 1.3;
+}
+
+/* City */
+.property-card__city {
+  font-size: .875rem;
+  color: #6c757d;
+  margin-bottom: .5rem;
+}
+
+/* Features */
+.property-card__features {
+  font-size: .875rem;
+  color: #495057;
+  margin-bottom: .75rem;
+}
+
+/* Divider */
+.spacer-divider {
+  height: 1px;
+  background-color: var(--neutral-300, #e5e7eb);
+  margin: .75rem 0;
+}
+
+/* Price */
+p .property-card__price {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #000;
+}
+
+
 /* Block: property-card */
 .property-card {
   margin-bottom: 2rem;
   transition: all 0.3s ease;
+  border: none;
 }
 
 .property-card__inner {
@@ -349,7 +353,7 @@
 }
 
 .property-card__title {
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 600;
   color: #1a1a1a;
   margin-bottom: 0.5rem;
@@ -389,9 +393,9 @@
 }
 
 .property-card__price {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #007bff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #000000;
   margin-top: auto;
 }
 
